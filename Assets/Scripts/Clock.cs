@@ -9,6 +9,6 @@ public class Clock : MonoBehaviour
 
     void Awake()
     {
-        
+        hoursPivot.localRotation = Quaternion.Euler(0, 0, -30);
     }
 }

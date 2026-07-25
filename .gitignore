@@ -1,11 +1,15 @@
+UpgradeLog.htm
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+MemoryCaptures/
 UserSettings/
-
+.vs/
 .vscode/
+
 *.csproj
 *.sln
