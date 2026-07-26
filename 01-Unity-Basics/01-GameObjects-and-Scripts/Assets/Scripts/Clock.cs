@@ -10,9 +10,9 @@ public class Clock : MonoBehaviour
 
     [SerializeField]
     Transform hoursPivot, minPivot, secPivot;
-
     void Update()
     {
+        // Analog indicators
         TimeSpan time = DateTime.Now.TimeOfDay;
         hoursPivot.localRotation = Quaternion.Euler(0f, 0f, hoursToDegrees * (float)time.TotalHours);
         minPivot.localRotation = Quaternion.Euler(0f, 0f, minsToDegrees * (float)time.TotalMinutes);
