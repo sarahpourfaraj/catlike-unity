@@ -11,11 +11,11 @@ public class Clock : MonoBehaviour
     [SerializeField]
     Transform hoursPivot, minPivot, secPivot;
 
-    void Awake()
+    void Update()
     {
-        var time = DateTime.Now;
-        hoursPivot.localRotation = Quaternion.Euler(0f, 0f, hoursToDegrees * time.Hour);
-        minPivot.localRotation = Quaternion.Euler(0f, 0f, minsToDegrees * time.Minute);
-        secPivot.localRotation = Quaternion.Euler(0f, 0f, secsToDegrees * time.Second);
+        TimeSpan time = DateTime.Now.TimeOfDay;
+        hoursPivot.localRotation = Quaternion.Euler(0f, 0f, hoursToDegrees * (float)time.TotalHours);
+        minPivot.localRotation = Quaternion.Euler(0f, 0f, minsToDegrees * (float)time.TotalMinutes);
+        secPivot.localRotation = Quaternion.Euler(0f, 0f, secsToDegrees * (float)time.TotalSeconds);
     }
 }
