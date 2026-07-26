@@ -65,13 +65,18 @@ The UI communicates only with `ClockController`, which manages both clock system
 
 ## Screenshots
 
+<<<<<<< HEAD
 | Analog Clock | Digital Clock |
 |--------------|---------------|
 | ![](screenshots/1.png) | ![](screenshots/2.png) |
+=======
+| <img src="screenshots/1.png" width="260"> | <img src="screenshots/2.png" width="260"> | <img src="screenshots/3.png" width="260"> |
+>>>>>>> 8e448a9 (updated readme)
 
 ### Full View
 
 <p align="center">
+<<<<<<< HEAD
 <img src="screenshots/3.png" width="650">
 </p>
 
@@ -91,3 +96,9 @@ The UI communicates only with `ClockController`, which manages both clock system
 Tutorial by Catlike Coding.
 
 Extended and documented by Sarah Pourfaraj.
+=======
+<img src="screenshots/demo.gif" width="650">
+</p>
+
+---
+>>>>>>> 8e448a9 (updated readme)
