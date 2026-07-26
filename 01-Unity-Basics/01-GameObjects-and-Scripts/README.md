@@ -1,61 +1,93 @@
 # Unity Clock Project
 
-A 3D analog clock project built in Unity, extended with a digital display and interactive UI controls.
+A 3D analog clock built in Unity while following the Catlike Coding Basics tutorial, then extended with additional features beyond the original tutorial.
 
-![demo](screenshots/demo.gif)
+## Tutorial
 
-## Based On
-
-Tutorial:
+Catlike Coding – Game Objects and Scripts  
 https://catlikecoding.com/unity/tutorials/basics/game-objects-and-scripts/
+
+---
 
 ## Features
 
-- Real-time analog clock using system time
-- Rotating hour, minute, and second hands
-- Digital clock display using TextMeshPro
-- Toggle seconds visibility (analog + digital)
-- Switch between 12-hour and 24-hour time formats
-- Interactive UI buttons
+- Real-time analog clock synchronized with the system clock
+- Animated hour, minute, and second hands
+- Digital clock using TextMeshPro
+- Toggle second hand visibility
+- Switch between 12-hour and 24-hour formats
+- Simple interactive UI controls
+
+---
 
 ## What I Learned
 
-### Unity Basics
-- Creating and managing GameObjects
-- Working with Components
-- Using MonoBehaviour lifecycle methods
+### Unity Fundamentals
+- GameObjects & Components
+- MonoBehaviour lifecycle
+- Transform hierarchy
 - Scene organization
 
-### Mathematics & Transformations
-- Working with Transform components
-- Understanding rotations
-- Using Quaternion.Euler for rotations
-- Mapping time values to rotation angles
+### Programming
+- C# scripting
+- Working with system time
+- Structuring scripts
+- Controller pattern
 
-### UI Development
-- Creating Canvas-based UI
-- Using TextMeshPro
-- Connecting buttons with script methods
-- Managing UI state changes
+### Mathematics
+- Euler angles
+- Quaternion rotations
+- Converting time into rotation angles
+
+### UI
+- Canvas
+- Buttons
+- TextMeshPro
+- Event-driven UI
+
+---
 
 ## Architecture
 
-The project uses a simple controller-based architecture:
-Button
-↓
+```text
+UI Buttons
+      │
+      ▼
 ClockController
-↓
-├── Clock (Analog)
-└── DigitalClock (Digital)
-The UI does not directly control individual clock components. Instead, `ClockController` manages communication between systems.
+   ├──────────────┐
+   ▼              ▼
+Analog Clock   Digital Clock
+```
 
+The UI communicates only with `ClockController`, which manages both clock systems and keeps them synchronized.
 
-## Notes
-
-یشبث
+---
 
 ## Screenshots
 
-![clock demo](screenshots/1.png)
-![clock demo](screenshots/2.png)
-![clock demo](screenshots/3.png)
+| Analog Clock | Digital Clock |
+|--------------|---------------|
+| ![](screenshots/1.png) | ![](screenshots/2.png) |
+
+### Full View
+
+<p align="center">
+<img src="screenshots/3.png" width="650">
+</p>
+
+---
+
+## Future Improvements
+
+- Alarm system
+- Time zone selection
+- Theme switching
+- Smooth hand animation
+
+---
+
+## Credits
+
+Tutorial by Catlike Coding.
+
+Extended and documented by Sarah Pourfaraj.
