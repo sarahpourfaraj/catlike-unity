@@ -7,15 +7,31 @@ public class Clock : MonoBehaviour
     const float minsToDegrees = -6f;
     const float secsToDegrees = -6f;
 
-
     [SerializeField]
-    Transform hoursPivot, minPivot, secPivot;
+    private Transform hoursPivot, minPivot, secPivot;
+
+    private bool showSeconds = true;
+
     void Update()
     {
-        // Analog indicators
         TimeSpan time = DateTime.Now.TimeOfDay;
-        hoursPivot.localRotation = Quaternion.Euler(0f, 0f, hoursToDegrees * (float)time.TotalHours);
-        minPivot.localRotation = Quaternion.Euler(0f, 0f, minsToDegrees * (float)time.TotalMinutes);
-        secPivot.localRotation = Quaternion.Euler(0f, 0f, secsToDegrees * (float)time.TotalSeconds);
+
+        hoursPivot.localRotation =
+            Quaternion.Euler(0f, 0f, hoursToDegrees * (float)time.TotalHours);
+
+        minPivot.localRotation =
+            Quaternion.Euler(0f, 0f, minsToDegrees * (float)time.TotalMinutes);
+
+        if (showSeconds)
+        {
+            secPivot.localRotation =
+                Quaternion.Euler(0f, 0f, secsToDegrees * (float)time.TotalSeconds);
+        }
+    }
+
+    public void SetShowSeconds(bool value)
+    {
+        showSeconds = value;
+        secPivot.gameObject.SetActive(value);
     }
 }
