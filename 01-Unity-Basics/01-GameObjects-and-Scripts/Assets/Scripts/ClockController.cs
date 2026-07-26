@@ -6,6 +6,9 @@ public class ClockController : MonoBehaviour
     [SerializeField] private Clock analogClock;
     [SerializeField] private DigitalClock digitalClock;
     [SerializeField] private TMP_Text secondsButtonText;
+    [SerializeField] private bool is24Hour = true;
+    [SerializeField] private TMP_Text formatBtnText;
+
 
     private bool showSeconds = true;
 
@@ -16,5 +19,11 @@ public class ClockController : MonoBehaviour
         analogClock.SetShowSeconds(showSeconds);
         digitalClock.SetShowSeconds(showSeconds);
         secondsButtonText.text = showSeconds ? "Hide Seconds" : "Show Seconds";
+    }
+    public void ToggleFormat()
+    {
+        is24Hour = !is24Hour;
+        digitalClock.SetTimeFormat(is24Hour);
+        formatBtnText.text = is24Hour ? "24H" : "12H";
     }
 }
