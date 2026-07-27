@@ -72,6 +72,5 @@ The UI communicates only with `ClockController`, which manages both clock system
 
 ### Full View
 
-<p align="center">
 <img src="screenshots/demo.gif" width="650">
-</p>
+
