@@ -64,41 +64,14 @@ The UI communicates only with `ClockController`, which manages both clock system
 ---
 
 ## Screenshots
+<p align="center">
+<img src="screenshots/1.png" width="200">
+ <img src="screenshots/2.png" width="200">
+ <img src="screenshots/3.png" width="200"> </p>
 
-<<<<<<< HEAD
-| Analog Clock | Digital Clock |
-|--------------|---------------|
-| ![](screenshots/1.png) | ![](screenshots/2.png) |
-=======
-| <img src="screenshots/1.png" width="260"> | <img src="screenshots/2.png" width="260"> | <img src="screenshots/3.png" width="260"> |
->>>>>>> 8e448a9 (updated readme)
 
 ### Full View
 
 <p align="center">
-<<<<<<< HEAD
-<img src="screenshots/3.png" width="650">
-</p>
-
----
-
-## Future Improvements
-
-- Alarm system
-- Time zone selection
-- Theme switching
-- Smooth hand animation
-
----
-
-## Credits
-
-Tutorial by Catlike Coding.
-
-Extended and documented by Sarah Pourfaraj.
-=======
 <img src="screenshots/demo.gif" width="650">
 </p>
-
----
->>>>>>> 8e448a9 (updated readme)
